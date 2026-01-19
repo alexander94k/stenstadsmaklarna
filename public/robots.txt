@@ -1,0 +1,11 @@
+# Robots.txt for Stenstadsmäklarna
+# https://stenstadsmaklarna.se
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stenstadsmaklarna.se/sitemap.xml
+
+# Crawl-delay (optional, respectful crawling)
+Crawl-delay: 1
