@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valja maklare - Komplett checklista for ratt val | Stenstadsmaklarna</title>
+  <meta name="description" content="Komplett guide for att valja ratt maklare. Las om viktiga faktorer som erfarenhet, statistik, avgifter, kommunikation och marknadsföring.">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .page-hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content-section {
+      padding: 80px 24px;
+    }
+
+    .content-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-inner h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      margin-top: 48px;
+    }
+
+    .content-inner h2:first-child {
+      margin-top: 0;
+    }
+
+    .content-inner h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .content-inner p {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .content-inner ul, .content-inner ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .content-inner li {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .content-inner strong {
+      color: #1a1a1a;
+    }
+
+    /* Factor Cards */
+    .factor-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 32px 0;
+      border-left: 4px solid #1e3a5f;
+    }
+
+    .factor-card h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .factor-icon {
+      width: 32px;
+      height: 32px;
+      background: #1e3a5f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .factor-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Checklist */
+    .checklist {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .checklist h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1e3a5f;
+    }
+
+    .checklist ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 8px;
+    }
+
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #1e3a5f;
+      border-radius: 3px;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 32px 0;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .comparison-table th {
+      background: #1e3a5f;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .comparison-table td {
+      font-size: 15px;
+      color: #444;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: #f0f4f8;
+      border-left: 4px solid #1e3a5f;
+      padding: 24px;
+      margin: 32px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .info-box h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      background: #fef6e6;
+      border-left: 4px solid #d4a012;
+      padding: 24px;
+      margin: 32px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .warning-box h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #8a6914;
+      margin-bottom: 12px;
+    }
+
+    .warning-box p {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: #5c4a12;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      margin-bottom: 24px;
+      color: #666;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .comparison-table {
+        font-size: 14px;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala maklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmaklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/">Till salu</a>
+        <a href="/salja-bostad/">Salja</a>
+        <a href="/kopa-bostad/">Kopa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Valja maklare</h1>
+      <p>Komplett checklista for att hitta ratt maklare for din bostadsforsaljning</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="content-inner">
+      <h2>Vad innebar det att valja maklare?</h2>
+      <p>Att valja ratt maklare ar ett av de viktigaste besluten du tar nar du ska salja din bostad. En bra maklare kan gora skillnad pa tiotusentals kronor i slutpriset, samtidigt som processen blir smidigare och mindre stressande for dig som saljare.</p>
+
+      <p>Men hur vet du vilken maklare som passar just dig och din bostad? I den har guiden gar vi igenom de viktigaste faktorerna att tanka pa och ger dig en komplett checklista for att gora ratt val.</p>
+
+      <h2>Viktiga faktorer att utvardera</h2>
+
+      <div class="factor-card">
+        <h3><span class="factor-icon">1</span> Erfarenhet och lokalkännedom</h3>
+        <p>En maklare med erfarenhet fran ditt omrade har ovardelig kunskap om lokala prisnivaer, koparbetemenden och vad som saljer bast. De har ofta ett natverk av potentiella kopare och vet hur man marknadsfor bostader i just ditt omrade.</p>
+        <ul>
+          <li>Hur lange har maklaren arbetat i omradet?</li>
+          <li>Hur manga bostader har de salt i narheten?</li>
+          <li>Vilken typ av bostader ar de specialiserade pa?</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3><span class="factor-icon">2</span> Statistik och resultat</h3>
+        <p>Tidigare resultat ar ofta den basta indikatorn pa framtida prestation. Be om konkret statistik och var inte radd for att jamfora olika maklare.</p>
+        <ul>
+          <li><strong>Slutpris vs utgangspris:</strong> Hur ofta saljer de over utgangs­priset?</li>
+          <li><strong>Forsaljningstid:</strong> Hur lang tid tar det i genomsnitt att salja?</li>
+          <li><strong>Antal forsaljningar:</strong> Hur aktiv ar maklaren pa marknaden?</li>
+          <li><strong>Kundbetyg:</strong> Vad sager tidigare kunder om samarbetet?</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3><span class="factor-icon">3</span> Avgifter och provision</h3>
+        <p>Maklararvode varierar och det ar viktigt att forsta vad som ingar i priset. Det billigaste alternativet ar inte alltid det basta.</p>
+        <ul>
+          <li><strong>Fast arvode:</strong> Ett bestamt belopp oavsett slutpris</li>
+          <li><strong>Provisionsbaserat:</strong> En procentsats av forsaljningspriset (vanligtvis 1,5-3%)</li>
+          <li><strong>Kombination:</strong> Fast grundavgift plus provision</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h4>Tank pa helheten</h4>
+        <p>En maklare som tar 0,5% hogre provision men saljer din bostad for 100 000 kr mer ar fortfarande ett battre val. Fokusera pa nettoresultatet, inte bara kostnaden.</p>
+      </div>
+
+      <div class="factor-card">
+        <h3><span class="factor-icon">4</span> Kommunikation och tillganglighet</h3>
+        <p>Under forsaljningsprocessen kommer du ha manga fragor och behova snabba svar. En maklare som ar latttillganglig och kommunicerar tydligt gor processen mycket enklare.</p>
+        <ul>
+          <li>Hur snabbt svarar de pa fragor?</li>
+          <li>Vilka kommunikationskanaler anvander de?</li>
+          <li>Hur ofta far du uppdateringar under forsaljningen?</li>
+          <li>Kanns kemin bra mellan er?</li>
+        </ul>
+      </div>
+
+      <div class="factor-card">
+        <h3><span class="factor-icon">5</span> Marknadsföring</h3>
+        <p>Hur din bostad presenteras och marknadsförs paverkar direkt hur manga intressenter du far och till vilket pris du kan salja.</p>
+        <ul>
+          <li><strong>Fotografering:</strong> Professionella bilder ar ett maste</li>
+          <li><strong>Styling:</strong> Erbjuds hemstaging eller stylad fotografering?</li>
+          <li><strong>Annonsering:</strong> Vilka kanaler anvands (Hemnet, sociala medier, etc.)?</li>
+          <li><strong>Planritningar:</strong> 3D-planlosningar och virtuella visningar?</li>
+          <li><strong>Drönare:</strong> Drönarbild-bilder for villor och storre fastigheter?</li>
+        </ul>
+      </div>
+
+      <h2>Jamfor flera maklare</h2>
+      <p>Vi rekommenderar alltid att traffa och jamfora minst 2-3 maklare innan du bestämmer dig. De flesta maklare erbjuder kostnadsfri vardering, sa utnyttja detta.</p>
+
+      <div class="checklist">
+        <h4>Fragor att stalla vid varderings-besok</h4>
+        <ul>
+          <li>Vad ar din bedömning av vardert?</li>
+          <li>Hur skulle du marknadsföra min bostad?</li>
+          <li>Vilken forsaljningsstrategi rekommenderar du?</li>
+          <li>Vad tar du i arvode och vad ingar?</li>
+          <li>Hur lang tid tror du forsaljningen tar?</li>
+          <li>Kan jag fa referenser fran tidigare kunder?</li>
+          <li>Hur kommunicerar vi under forsaljningen?</li>
+          <li>Vad händer om bostaden inte saljs?</li>
+        </ul>
+      </div>
+
+      <h2>Vanliga misstag att undvika</h2>
+
+      <div class="warning-box">
+        <h4>Valj inte bara baserat pa pris</h4>
+        <p>Att valja maklaren med lagst arvode eller hogsta vardering kan kosta dig mer i langden. En for hog vardering kan leda till lang forsaljningstid och prisreduceringar.</p>
+      </div>
+
+      <h3>Misstag 1: Valja hogsta varderingen</h3>
+      <p>Vissa maklare overskattar vardet for att vinna uppdraget. En orealistisk utgangspris kan leda till att bostaden blir liggande och du tvingas sanka priset - ofta till under vad den hade salts for med ratt pris fran borjan.</p>
+
+      <h3>Misstag 2: Fokusera endast pa arvodet</h3>
+      <p>En maklare som tar 0,5% lagre arvode men saljer for 3% mindre ger dig fortfarande ett samre resultat. Se till helheten.</p>
+
+      <h3>Misstag 3: Ignorera kemin</h3>
+      <p>Du kommer arbeta nara din maklare under flera veckor eller manader. Om du inte kanns bekväm med personen kommer samarbetet bli anstrangt.</p>
+
+      <h3>Misstag 4: Inte kolla referenser</h3>
+      <p>Be om att fa prata med tidigare kunder. En bra maklare har inget att dölya och delar garna kontaktuppgifter till nojda saljare.</p>
+
+      <h2>Sammanfattning - Checklista</h2>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Faktor</th>
+            <th>Vad du bor kolla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Erfarenhet</strong></td>
+            <td>Ar i branschen, antal forsaljningar i omradet</td>
+          </tr>
+          <tr>
+            <td><strong>Statistik</strong></td>
+            <td>Slutpris vs utgangspris, forsaljningstid, kundbetyg</td>
+          </tr>
+          <tr>
+            <td><strong>Avgifter</strong></td>
+            <td>Arvodesmodell, vad som ingar, dolda kostnader</td>
+          </tr>
+          <tr>
+            <td><strong>Kommunikation</strong></td>
+            <td>Svarstid, tillganglighet, personkemi</td>
+          </tr>
+          <tr>
+            <td><strong>Marknadsföring</strong></td>
+            <td>Foto, styling, annonskanaler, digitala verktyg</td>
+          </tr>
+          <tr>
+            <td><strong>Referenser</strong></td>
+            <td>Omdömen, tidigare kunders upplevelser</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cta-box">
+        <h3>Boka en kostnadsfri vardering</h3>
+        <p>Vi pa Stenstadsmaklarna erbjuder alltid kostnadsfri vardering utan forpliktelser. Lat oss traffas och prata om hur vi kan hjalpa dig salja din bostad.</p>
+        <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Redo att hitta din maklare?</h2>
+      <p>Kontakta oss for en kostnadsfri och oforpliktande vardering av din bostad.</p>
+      <div class="cta-buttons">
+        <a href="/vardering-av-bostad/" class="btn btn-white">Boka vardering</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmaklarna</span>
+          </a>
+          <p>Din lokala maklare i Sundsvall. Vi hjalper dig genom hela bostadsaffaren med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjanster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Salja bostad</a></li>
+            <li><a href="/kopa-bostad/">Kopa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Vardering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostader till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmaklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Bjorneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmaklarna. Alla rattigheter forbehallna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

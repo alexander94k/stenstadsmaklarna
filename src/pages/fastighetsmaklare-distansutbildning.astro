@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastighetsmäklare distansutbildning - Studera pa distans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #1e3a5f;
+      border: 1px solid #1e3a5f;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .page-hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content-section {
+      padding: 80px 24px;
+    }
+
+    .content-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-inner h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+    }
+
+    .content-inner h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    .content-inner p {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .content-inner ul {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .content-inner li {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    .cta-box p {
+      margin-bottom: 24px;
+      color: #666;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala maklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmaklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/">Till salu</a>
+        <a href="/salja-bostad/">Salja</a>
+        <a href="/kopa-bostad/">Kopa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Fastighetsmäklare distansutbildning</h1>
+      <p>Studera till maklare pa distans - flexibelt och anpassat efter ditt liv</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="content-inner">
+      <h2>Kan man utbilda sig till maklare pa distans?</h2>
+      <p>Ja, det finns flera godkanda fastighetsmäklarutbildningar som ges pa distans. Distansutbildningar ar ett utmarkt alternativ for dig som vill kombinera studierna med arbete, familj eller om du bor langt fran en hogskola med campusutbildning.</p>
+
+      <p>En distansutbildning ger samma behorighet som en campusutbildning och leder till samma examen. Efter avslutad utbildning kan du ansoka om registrering hos Fastighetsmaklarinspektionen precis som alla andra.</p>
+
+      <h3>Vilka larosaten erbjuder distansutbildning?</h3>
+      <p>Flera hogskolor och universitet erbjuder fastighetsmäklarutbildning pa distans:</p>
+      <ul>
+        <li><strong>Hogskolan i Gavle</strong> - Fastighetsmäklarprogrammet pa distans, 180 hp</li>
+        <li><strong>Hogskolan Vast</strong> - Fastighetsmäklarutbildning, distansform med vissa trafffar</li>
+        <li><strong>Mittuniversitetet</strong> - Fastighetsformedling, distansutbildning</li>
+        <li><strong>Malmo universitet</strong> - Erbjuder delvis distansupplägg</li>
+      </ul>
+
+      <p>Kontrollera aktuellt utbud pa Antagning.se da det kan andras mellan ar.</p>
+
+      <h3>Hur fungerar distansutbildningen?</h3>
+      <p>Distansutbildningar for fastighetsmäklare ar uppbyggda pa olika satt, men vanliga inslag ar:</p>
+      <ul>
+        <li><strong>Webbaserade forelasningar</strong> - Preglade eller livestreamade forelasningar</li>
+        <li><strong>Digital larplattform</strong> - Kursmaterial, inlamningsuppgifter och diskussionsforum</li>
+        <li><strong>Obligatoriska trafffar</strong> - De flesta utbildningar har nagra fysiska trafffar per termin</li>
+        <li><strong>Tentamen</strong> - Kan vara digitala eller skrivas pa plats</li>
+        <li><strong>Grupparbeten</strong> - Samarbete med andra studenter online</li>
+      </ul>
+
+      <h3>Fordelar med distansutbildning</h3>
+      <p>Att studera pa distans har manga fordelar:</p>
+      <ul>
+        <li><strong>Flexibilitet</strong> - Studera nar det passar dig, kväll, helg eller dag</li>
+        <li><strong>Kombinera med arbete</strong> - Mojligt att jobba parallellt med studierna</li>
+        <li><strong>Ingen pendling</strong> - Spara tid och pengar pa resor</li>
+        <li><strong>Bor var du vill</strong> - Ingen flytt kravs</li>
+        <li><strong>Eget tempo</strong> - Manga moment kan goras i din egen takt</li>
+        <li><strong>Praktisk erfarenhet</strong> - Lattare att arbeta som maklarassistent under utbildningen</li>
+      </ul>
+
+      <h3>Utmaningar med distansstudier</h3>
+      <p>Det finns ocksa utmaningar att vara medveten om:</p>
+      <ul>
+        <li><strong>Sjalvdisciplin kravs</strong> - Du maste vara motiverad att studera pa egen hand</li>
+        <li><strong>Mindre social kontakt</strong> - Farrre mojligheter att traffa klassklamerater</li>
+        <li><strong>Tekniska krav</strong> - Du behover dator, internetuppkoppling och lugn studiemiljo</li>
+        <li><strong>Obligatoriska trafffar</strong> - Du kan behova resa till larosatet vid vissa tillfallen</li>
+      </ul>
+
+      <h3>Studietakt och langd</h3>
+      <p>Fastighetsmäklarutbildningen pa distans erbjuds vanligtvis i tva varianter:</p>
+      <ul>
+        <li><strong>Helfart (100%)</strong> - Cirka 3 ar for 180 hogskolepoang</li>
+        <li><strong>Halvfart (50%)</strong> - Cirka 6 ar for samma utbildning, lattare att kombinera med arbete</li>
+      </ul>
+
+      <p>Valj studietakt utifrån din livssituation. Det ar battre att valja halvfart och klara kurserna an att stressa genom pa helfart.</p>
+
+      <h3>Ansokan och antagning</h3>
+      <p>Ansokan till distansutbildningar gors pa samma satt som till campusutbildningar, via Antagning.se. Antagningspoangen ar ofta något lagre for distansutbildningar, vilket kan vara en fordel om du har lagre betyg.</p>
+
+      <p>Behorighetskreaven ar desamma som for campusutbildningar - grundlaggande behorighet plus specifika forkunskapskrav.</p>
+
+      <h3>Tips for framgangsrika distansstudier</h3>
+      <ul>
+        <li>Skapa en fast studierutin med bestamda tider</li>
+        <li>Ha en dedikerad studieplats utan storningsmoment</li>
+        <li>Delta aktivt i diskussionsforum och grupparbeten</li>
+        <li>Kontakta larare tidigt om du har fragor</li>
+        <li>Planera in de obligatoriska traffarna i god tid</li>
+        <li>Overväag att arbeta som maklarassistent parallellt</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>Vill du veta mer om maklaryrket?</h3>
+        <p>Kontakta oss for ett samtal om hur det ar att arbeta som fastighetsmäklare.</p>
+        <a href="/kontakta-oss/" class="btn btn-primary">Kontakta oss</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Funderar du pa att salja?</h2>
+      <p>Boka en kostnadsfri vardering sa berättar vi vad din bostad ar vard pa dagens marknad.</p>
+      <div class="cta-buttons">
+        <a href="/vardering-av-bostad/" class="btn btn-white">Boka vardering</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmaklarna</span>
+          </a>
+          <p>Din lokala maklare i Sundsvall. Vi hjalper dig genom hela bostadsaffaren med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjanster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Salja bostad</a></li>
+            <li><a href="/kopa-bostad/">Kopa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Vardering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostader till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmaklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Bjorneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmaklarna. Alla rattigheter forbehallna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

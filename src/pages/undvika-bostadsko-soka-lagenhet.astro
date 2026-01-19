@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undvik bostadsko - Alternativ, Strategier och Tips | Stenstadsmaklarna</title>
+  <meta name="description" content="5 smarta satt att hitta lagenhet utan att sta i bostadsko. Las om andrahandsmarknaden, privata hyresvardar, nyproduktion och fler alternativ.">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .page-hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content-section {
+      padding: 80px 24px;
+    }
+
+    .content-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-inner h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      margin-top: 48px;
+    }
+
+    .content-inner h2:first-child {
+      margin-top: 0;
+    }
+
+    .content-inner h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .content-inner p {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .content-inner ul, .content-inner ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .content-inner li {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .content-inner strong {
+      color: #1a1a1a;
+    }
+
+    /* Numbered Steps */
+    .step-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 32px 0;
+      border-left: 4px solid #1e3a5f;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #1e3a5f;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .step-card h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .step-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: #f0f4f8;
+      border-left: 4px solid #1e3a5f;
+      padding: 24px;
+      margin: 32px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .info-box h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      margin-bottom: 24px;
+      color: #666;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala maklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmaklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/">Till salu</a>
+        <a href="/salja-bostad/">Salja</a>
+        <a href="/kopa-bostad/">Kopa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Undvik bostadskon</h1>
+      <p>5 smarta strategier for att hitta lagenhet utan att vanta i aratal</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="content-inner">
+      <h2>Ar bostadskon det enda sattet?</h2>
+      <p>Manga tror att bostadskon ar det enda sattet att fa en hyreslagenhet i Sverige. Men sanningen ar att det finns flera alternativa vagar till eget boende. Bostadskon kan innebara 10-20 ars vantan i storstaderna, men med ratt strategi kan du flytta in i en lagenhet betydligt snabbare.</p>
+
+      <p>Har presenterar vi fem beprövade metoder for att hitta bostad utan att behova vanta i den kommunala bostadskon.</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Andrahandsmarknaden</h3>
+        <p>Andrahandsuthyrning ar ett av de snabbaste satten att fa en lagenhet. Manga fasthandshyresgaster hyr ut sina lagenheter under kortare eller langre perioder, till exempel vid utlandsstudier, arbete pa annan ort eller nar de provar att bo ihop med en partner.</p>
+        <ul>
+          <li><strong>Fordelar:</strong> Snabb inflytt, ofta centrala lagen, mojlighet att prova ett omrade</li>
+          <li><strong>Nackdelar:</strong> Tidsbegransat kontrakt, hogre hyra, osaker framtid</li>
+          <li><strong>Tips:</strong> Anvand Blocket, Facebook-grupper och nischade andrahandssajter</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Kontakter och natverk</h3>
+        <p>Manga lagenheter formedlas aldrig offentligt utan gar genom personliga kontakter. Att aktivt sprida ordet om att du soker bostad kan oppna dorrar som annars ar stangda.</p>
+        <ul>
+          <li><strong>Beratta for alla:</strong> Familie, vanner, kollegor, bekanta</li>
+          <li><strong>Anvand sociala medier:</strong> Posta i lokala grupper och pa LinkedIn</li>
+          <li><strong>Narna dig foretag:</strong> Stora arbetsgivare har ibland tillgang till bostader</li>
+        </ul>
+        <p>Mangen har fatt sin lagenhet genom att nagon i nara omgivning kande nagon som skulle flytta.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Privata hyresvardar</h3>
+        <p>Privata fastighetsagare har ofta kortare koer och snabbare handlaggningstider an kommunala bostadsbolag. De annonserar pa sina egna hemsidor och via olika bostadsportaler.</p>
+        <ul>
+          <li><strong>Sa hittar du dem:</strong> Sok pa bostadsportaler, kontakta fastighetsforvaltare direkt</li>
+          <li><strong>Registrera dig brett:</strong> Ga med i flera privata bostadskoer</li>
+          <li><strong>Var beredd:</strong> Ha referenser och inkomstbevis redo</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <h3>Nyproduktion</h3>
+        <p>Nybyggda hyreslagenheter har ofta separata koer med kortare vantetider. Byggherrarna vill fylla husen snabbt och prioriterar inte alltid kotid.</p>
+        <ul>
+          <li><strong>Bevaka byggprojekt:</strong> Folj byggforetag och fastighetsbolag</li>
+          <li><strong>Anmal intresse tidigt:</strong> Ga med i intresselistor for nya projekt</li>
+          <li><strong>Rakna pa ekonomin:</strong> Nyproduktion har ofta hogre hyra men aven lagre driftskostnader</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <h3>Kollektiv och inneboende</h3>
+        <p>Att dela bostad kan vara en utmarkt losning, sarskilt for yngre och studenter. Det ar ett billigare alternativ som aven ger sociala fordelar.</p>
+        <ul>
+          <li><strong>Kollektiv:</strong> Dela lagenhet eller hus med andra, gemensamma ytor</li>
+          <li><strong>Inneboende:</strong> Hyr ett rum hos nagon som har en storre bostad</li>
+          <li><strong>Forstahandskontrakt:</strong> Vissa kollektiv har forsthandskontrakt pa hela bostaden</li>
+        </ul>
+        <p>Detta kan vara ett bra forsta steg mot eget boende medan du bygger upp bostadsko eller sparkapital.</p>
+      </div>
+
+      <div class="info-box">
+        <h4>Overag att kopa istallet?</h4>
+        <p>Med dagens rantelage kan det i manga fall vara billigare att kopa en bostadsratt an att hyra. Berakna vad som passar din ekonomi bast.</p>
+      </div>
+
+      <h2>Kombinera strategier</h2>
+      <p>Det mest effektiva sattet ar att anvanda flera strategier parallellt. Medan du soker andrahandskontrakt kan du samtidigt bygga ditt natverk, registrera dig hos privata hyresvardar och bevaka nyproduktion. Ju fler jarn du har i elden, desto storre ar chansen att hitta ratt bostad.</p>
+
+      <div class="cta-box">
+        <h3>Funderar du pa att kopa istallet?</h3>
+        <p>Att kopa en bostadsratt eller villa kan vara ett bra alternativ till hyresmarknaden. Vi hjalper dig hitta ratt bostad.</p>
+        <a href="/kopa-bostad/" class="btn btn-primary">Las mer om att kopa bostad</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Hitta din nasta bostad</h2>
+      <p>Vi har bostader till salu i Sundsvall och omnejd. Ta en titt pa vart utbud.</p>
+      <div class="cta-buttons">
+        <a href="/fastigheter-till-salu/" class="btn btn-white">Se vara bostader</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmaklarna</span>
+          </a>
+          <p>Din lokala maklare i Sundsvall. Vi hjalper dig genom hela bostadsaffaren med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjanster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Salja bostad</a></li>
+            <li><a href="/kopa-bostad/">Kopa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Vardering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostader till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmaklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Bjorneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmaklarna. Alla rattigheter forbehallna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

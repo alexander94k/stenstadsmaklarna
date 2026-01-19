@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visningsrummet - Guider & experttips | Stenstadsmäklarna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    .page-hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .page-hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .blog-section {
+      padding: 80px 24px;
+    }
+
+    .blog-section .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .blog-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .blog-image {
+      height: 200px;
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 24px;
+    }
+
+    .blog-category {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e3a5f;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .blog-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .blog-excerpt {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .blog-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e3a5f;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .blog-link:hover {
+      text-decoration: underline;
+    }
+
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 1024px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 32px;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala mäklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmäklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/">Till salu</a>
+        <a href="/salja-bostad/">Sälja</a>
+        <a href="/kopa-bostad/">Köpa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka värdering</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Visningsrummet</h1>
+      <p>Guider och experttips om bostadsmarknaden</p>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="section-inner">
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Undvika bostadskö">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Bostadskö</span>
+            <h2 class="blog-title">5 sätt att undvika bostadskö när du söker lägenhet</h2>
+            <p class="blog-excerpt">Att få tag på en hyreslägenhet i Sverige kan ta flera år om du enbart förlitar dig på den kommunala bostadskön.</p>
+            <a href="/undvika-bostadsko-soka-lagenhet/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Spara kontantinsats">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Ekonomi</span>
+            <h2 class="blog-title">Spara till kontantinsatsen - sparkonto eller fasträntekonto?</h2>
+            <p class="blog-excerpt">Att spara ihop till en kontantinsats kräver att du väljer rätt typ av konto för dina pengar.</p>
+            <a href="/spara-kontantinsats/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80" alt="Välja mäklare">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Mäklare</span>
+            <h2 class="blog-title">Välja mäklare - Komplett checklista för rätt val</h2>
+            <p class="blog-excerpt">Att välja mäklare är ett beslut som kan avgöra både slutpris och hur smidig försäljningen blir.</p>
+            <a href="/valja-maklare/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&q=80" alt="Byta mäklare">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Mäklare</span>
+            <h2 class="blog-title">Så byter du mäklare - Guide & vanliga fallgropar</h2>
+            <p class="blog-excerpt">Att byta mäklare mitt i en försäljning har blivit allt vanligare - men vad innebär det egentligen?</p>
+            <a href="/byta-maklare/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Hur mycket tjänar en mäklare">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Mäklare</span>
+            <h2 class="blog-title">Hur mycket tjänar en mäklare?</h2>
+            <p class="blog-excerpt">I genomsnitt tjänar en fastighetsmäklare cirka 41 800 SEK före skatt enligt SCB.</p>
+            <a href="/hur-mycket-tjanar-en-maklare/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80" alt="Utbildning mäklare">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Mäklare</span>
+            <h2 class="blog-title">Mäklare utbildning - Så blir du fastighetsmäklare</h2>
+            <p class="blog-excerpt">För att bli fastighetsmäklare i Sverige krävs en utbildning godkänd av Fastighetsmäklarinspektionen.</p>
+            <a href="/utbildning-maklare/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Planera flytt">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Tips</span>
+            <h2 class="blog-title">Så planerar du din flytt - 5 smarta tips</h2>
+            <p class="blog-excerpt">Att flytta kan vara en av livets mest stressfyllda upplevelser. Rätt planering gör processen smidigare.</p>
+            <a href="/sa-planerar-du-din-flytt/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=600&q=80" alt="Anlita flyttfirma">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Tips</span>
+            <h2 class="blog-title">När ska du anlita en flyttfirma?</h2>
+            <p class="blog-excerpt">Rätt planering av flytten kan ha direkt påverkan på både försäljningspris och hur snabbt bostaden säljs.</p>
+            <a href="/nar-ska-du-anlita-en-flyttfirma/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Kolla upp mäklare">
+          </div>
+          <div class="blog-content">
+            <span class="blog-category">Mäklare</span>
+            <h2 class="blog-title">Kolla upp mäklare - Så granskar du din mäklare</h2>
+            <p class="blog-excerpt">Att kolla upp mäklare har blivit allt vanligare innan en bostadsaffär, men många vet inte var de ska börja.</p>
+            <a href="/kolla-upp-maklare/" class="blog-link">Läs mer →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Funderar du på att sälja?</h2>
+      <p>Boka en kostnadsfri värdering så berättar vi vad din bostad är värd på dagens marknad.</p>
+      <div class="cta-buttons">
+        <a href="/vardering-av-bostad/" class="btn btn-white">Boka värdering</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmäklarna</span>
+          </a>
+          <p>Din lokala mäklare i Sundsvall. Vi hjälper dig genom hela bostadsaffären med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjänster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Sälja bostad</a></li>
+            <li><a href="/kopa-bostad/">Köpa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Värdering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostäder till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmäklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Björneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmäklarna. Alla rättigheter förbehållna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

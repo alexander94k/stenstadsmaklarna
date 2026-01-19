@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stenstadsmäklarna | Mäklare i Sundsvall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #1e3a5f;
+      border: 1px solid #1e3a5f;
+    }
+
+    .btn-outline:hover {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      max-width: 600px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+
+    /* Search Box */
+    .search-box {
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      max-width: 640px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+    .search-box h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .search-input-wrapper {
+      display: flex;
+      gap: 12px;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: #1e3a5f;
+    }
+
+    .search-input::placeholder {
+      color: #999;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      background: #f8f8f8;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .quick-links-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+    }
+
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .quick-link:hover {
+      color: #1e3a5f;
+      border-bottom-color: #1e3a5f;
+    }
+
+    .quick-link svg {
+      width: 20px;
+      height: 20px;
+      color: #1e3a5f;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      font-size: 17px;
+      color: #666;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Properties */
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .property-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .property-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .property-image {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .property-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .property-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .property-badge.sold {
+      background: #c0392b;
+    }
+
+    .property-info {
+      padding: 20px;
+    }
+
+    .property-address {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+
+    .property-area {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .property-details {
+      display: flex;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .property-detail {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .property-price {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-top: 16px;
+    }
+
+    .view-all {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* Services */
+    .services-section {
+      background: #f8f8f8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 32px;
+      border-radius: 8px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .service-card a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1e3a5f;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .service-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Team */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      border: 4px solid #f0f0f0;
+    }
+
+    .team-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+
+    .team-title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .team-contact {
+      font-size: 13px;
+      color: #1e3a5f;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .properties-grid,
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .quick-links-inner {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .properties-grid,
+      .services-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala mäklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmäklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/" class="active">Till salu</a>
+        <a href="/salja-bostad/">Sälja</a>
+        <a href="/kopa-bostad/">Köpa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka värdering</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hitta ditt nya hem i Sundsvall</h1>
+      <p>Vi hjälper dig genom hela bostadsaffären med personlig service och lokal expertis.</p>
+
+      <div class="search-box">
+        <h3>Sök bland våra bostäder</h3>
+        <div class="search-input-wrapper">
+          <input type="text" class="search-input" placeholder="Sök på adress, område eller typ...">
+          <button class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+            Sök
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <div class="quick-links">
+    <div class="quick-links-inner">
+      <a href="/fastigheter-till-salu/" class="quick-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+        </svg>
+        Bostäder till salu
+      </a>
+      <a href="/vardering-av-bostad/" class="quick-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        Gratis värdering
+      </a>
+      <a href="/kontakta-oss/" class="quick-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+        Boka möte
+      </a>
+      <a href="/om-oss/" class="quick-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Hitta mäklare
+      </a>
+    </div>
+  </div>
+
+  <!-- Properties -->
+  <section>
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Bostäder till salu</h2>
+        <p>Utforska vårt aktuella utbud av bostäder i Sundsvall med omnejd</p>
+      </div>
+
+      <div class="properties-grid">
+        <!-- Property 1 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Villa i Skönsmon">
+            <span class="property-badge">Nyhet</span>
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Granvägen 12</h3>
+            <p class="property-area">Skönsmon, Sundsvall</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M5 21V9l7-6 7 6v12"/>
+                </svg>
+                Villa
+              </span>
+              <span class="property-detail">145 m²</span>
+              <span class="property-detail">5 rum</span>
+            </div>
+            <p class="property-price">4 950 000 kr</p>
+          </div>
+        </article>
+
+        <!-- Property 2 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Lägenhet Storgatan">
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Storgatan 45, 3tr</h3>
+            <p class="property-area">Centrum, Sundsvall</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                </svg>
+                Bostadsrätt
+              </span>
+              <span class="property-detail">78 m²</span>
+              <span class="property-detail">3 rum</span>
+            </div>
+            <p class="property-price">2 195 000 kr</p>
+          </div>
+        </article>
+
+        <!-- Property 3 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Radhus Sundsvall">
+            <span class="property-badge">Visning sön 14:00</span>
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Björkallén 8B</h3>
+            <p class="property-area">Granloholm, Sundsvall</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M5 21V9l7-6 7 6v12"/>
+                </svg>
+                Radhus
+              </span>
+              <span class="property-detail">112 m²</span>
+              <span class="property-detail">4 rum</span>
+            </div>
+            <p class="property-price">3 450 000 kr</p>
+          </div>
+        </article>
+
+        <!-- Property 4 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Lägenhet Norra kajen">
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Kajstråket 22</h3>
+            <p class="property-area">Norra kajen, Sundsvall</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                </svg>
+                Bostadsrätt
+              </span>
+              <span class="property-detail">92 m²</span>
+              <span class="property-detail">4 rum</span>
+            </div>
+            <p class="property-price">3 795 000 kr</p>
+          </div>
+        </article>
+
+        <!-- Property 5 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80" alt="Villa Timrå">
+            <span class="property-badge sold">Såld</span>
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Tallvägen 5</h3>
+            <p class="property-area">Timrå</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M5 21V9l7-6 7 6v12"/>
+                </svg>
+                Villa
+              </span>
+              <span class="property-detail">168 m²</span>
+              <span class="property-detail">6 rum</span>
+            </div>
+            <p class="property-price" style="color: #999; text-decoration: line-through;">5 200 000 kr</p>
+          </div>
+        </article>
+
+        <!-- Property 6 -->
+        <article class="property-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600573472591-ee6a85c68f36?w=600&q=80" alt="Lägenhet Sundsvall">
+            <span class="property-badge">Nyhet</span>
+          </div>
+          <div class="property-info">
+            <h3 class="property-address">Esplanaden 18, 5tr</h3>
+            <p class="property-area">Centrum, Sundsvall</p>
+            <div class="property-details">
+              <span class="property-detail">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                </svg>
+                Bostadsrätt
+              </span>
+              <span class="property-detail">56 m²</span>
+              <span class="property-detail">2 rum</span>
+            </div>
+            <p class="property-price">1 695 000 kr</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="view-all">
+        <a href="/fastigheter-till-salu/" class="btn btn-outline">Visa alla bostäder →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Hur kan vi hjälpa dig?</h2>
+        <p>Vi erbjuder professionell hjälp genom hela bostadsaffären</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Sälja bostad</h3>
+          <p>Vi tar hand om hela försäljningen - från värdering och marknadsföring till visningar och kontraktsskrivning. Du får en engagerad mäklare med lokal kunskap.</p>
+          <a href="/salja-bostad/">Läs mer om att sälja →</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Köpa bostad</h3>
+          <p>Letar du efter ditt drömhem? Vi hjälper dig att hitta rätt bostad och guidar dig tryggt genom budgivning och köpeprocess.</p>
+          <a href="/kopa-bostad/">Läs mer om att köpa →</a>
+        </div>
+
+        <div class="service-card">
+          <h3>Värdering</h3>
+          <p>Funderar du på att sälja? Boka en kostnadsfri värdering så berättar vi vad din bostad är värd på dagens marknad.</p>
+          <a href="/vardering-av-bostad/">Boka gratis värdering →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section>
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>Möt våra mäklare</h2>
+        <p>Erfarna fastighetsmäklare med gedigen lokalkännedom</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="Jenny Sundberg" class="team-photo">
+          <h3 class="team-name">Jenny Sundberg</h3>
+          <p class="team-title">Fastighetsmäklare, Delägare</p>
+          <a href="tel:+46701234567" class="team-contact">070-123 45 67</a>
+        </div>
+
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Marcus Eriksson" class="team-photo">
+          <h3 class="team-name">Marcus Eriksson</h3>
+          <p class="team-title">Fastighetsmäklare</p>
+          <a href="tel:+46702345678" class="team-contact">070-234 56 78</a>
+        </div>
+
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Anna Lindgren" class="team-photo">
+          <h3 class="team-name">Anna Lindgren</h3>
+          <p class="team-title">Fastighetsmäklare</p>
+          <a href="tel:+46703456789" class="team-contact">070-345 67 89</a>
+        </div>
+
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Erik Johansson" class="team-photo">
+          <h3 class="team-name">Erik Johansson</h3>
+          <p class="team-title">Fastighetsmäklare</p>
+          <a href="tel:+46704567890" class="team-contact">070-456 78 90</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Funderar du på att sälja?</h2>
+      <p>Boka en kostnadsfri värdering så berättar vi vad din bostad är värd på dagens marknad.</p>
+      <div class="cta-buttons">
+        <a href="/vardering-av-bostad/" class="btn btn-white">Boka värdering</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmäklarna</span>
+          </a>
+          <p>Din lokala mäklare i Sundsvall. Vi hjälper dig genom hela bostadsaffären med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjänster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Sälja bostad</a></li>
+            <li><a href="/kopa-bostad/">Köpa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Värdering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostäder till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmäklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Björneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmäklarna. Alla rättigheter förbehållna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

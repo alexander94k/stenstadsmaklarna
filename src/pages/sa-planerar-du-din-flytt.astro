@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sa planerar du din flytt - 5 smarta tips | Stenstadsmaklarna</title>
+  <meta name="description" content="Komplett guide for att planera din flytt. Las om forberedelser, budgetering, packningstips och vad du ska tanka pa efter flytten.">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .serif {
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-top {
+      background: #1e3a5f;
+      color: #fff;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .header-top a:hover {
+      opacity: 1;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: #1e3a5f;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e3a5f;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom-color: #1e3a5f;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #1e3a5f;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2a4a73;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      margin-top: 113px;
+      background: #1e3a5f;
+      padding: 80px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80') center/cover;
+      opacity: 0.15;
+    }
+
+    .page-hero-content {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Content */
+    .content-section {
+      padding: 80px 24px;
+    }
+
+    .content-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-inner h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      margin-top: 48px;
+    }
+
+    .content-inner h2:first-child {
+      margin-top: 0;
+    }
+
+    .content-inner h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .content-inner p {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .content-inner ul, .content-inner ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .content-inner li {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .content-inner strong {
+      color: #1a1a1a;
+    }
+
+    /* Tip Cards */
+    .tip-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 32px;
+      margin: 32px 0;
+      border-left: 4px solid #1e3a5f;
+    }
+
+    .tip-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #1e3a5f;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .tip-card h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .tip-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Checklist */
+    .checklist {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+
+    .checklist h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1e3a5f;
+    }
+
+    .checklist ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 8px;
+    }
+
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #1e3a5f;
+      border-radius: 3px;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: #f0f4f8;
+      border-left: 4px solid #1e3a5f;
+      padding: 24px;
+      margin: 32px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .info-box h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e3a5f;
+      margin-bottom: 12px;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      margin-bottom: 24px;
+      color: #666;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #1e3a5f;
+      text-align: center;
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .btn-white {
+      background: #fff;
+      color: #1e3a5f;
+    }
+
+    .btn-white:hover {
+      background: #f0f0f0;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #0f1f2e;
+      color: #fff;
+      padding: 64px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 32px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="header-top-inner">
+        <span>Din lokala maklare i Sundsvall</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="tel:+46739823962">073-982 39 62</a>
+          <a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+          </svg>
+        </div>
+        <span class="logo-text">Stenstadsmaklarna</span>
+      </a>
+
+      <nav>
+        <a href="/fastigheter-till-salu/">Till salu</a>
+        <a href="/salja-bostad/">Salja</a>
+        <a href="/kopa-bostad/">Kopa</a>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/kontakta-oss/">Kontakt</a>
+      </nav>
+
+      <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1>Planera din flytt</h1>
+      <p>5 smarta tips for en smidig och stressfri flytt</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="content-section">
+    <div class="content-inner">
+      <h2>En val planerad flytt ar en lyckad flytt</h2>
+      <p>Att flytta ar en av livets stora handelser och kan vara bade spannande och stressande. Med god planering kan du minimera stressen och se till att allt gar smidigt. Har delar vi vara basta tips for att gora din flytt sa enkel som mojligt.</p>
+
+      <div class="tip-card">
+        <div class="tip-number">1</div>
+        <h3>Forberedelser - borja i god tid</h3>
+        <p>Ju tidigare du borjar planera, desto battre. Idealt ska du borja forbereda din flytt minst 6-8 veckor innan flyttdagen.</p>
+        <ul>
+          <li><strong>Gor en tidslinje:</strong> Skriv ner alla viktiga datum och deadlines</li>
+          <li><strong>Rensa och sortera:</strong> Ga igenom alla rum och bestam vad som ska med, saljas, skankas eller slängas</li>
+          <li><strong>Samla dokument:</strong> Hyreskontrakt, kopeavtal, forsakringspapper och andra viktiga handlingar</li>
+          <li><strong>Boka flyttfirma eller slap:</strong> Sarskilt viktigt vid manadsskiften da det ar hog efterfragan</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">2</div>
+        <h3>Budgetera for flytten</h3>
+        <p>En flytt kan bli dyrare an man tror. Genom att satta upp en realistisk budget undviker du obehagliga overraskningar.</p>
+        <ul>
+          <li><strong>Flyttkostnader:</strong> Flyttfirma, hyrslap, kartonger och emballage</li>
+          <li><strong>Dubbla boendekostnader:</strong> Overlappande hyror eller avgifter</li>
+          <li><strong>Adressandring:</strong> Eftersändning av post, nya nycklar</li>
+          <li><strong>Stadning:</strong> Flyttstadning av gamla bostaden</li>
+          <li><strong>Inkop:</strong> Nya mobler, gardiner eller andra saker till nya hemmet</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h4>Spartips</h4>
+        <p>Fraga i lokala butiker efter tomma kartonger, lana slap av vanner, och planera flytten mitt i manaden da priser ofta ar lagre.</p>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">3</div>
+        <h3>Packningstips som sparar tid</h3>
+        <p>Smart packning gor bade flytten och uppackningen enklare. Har ar vara basta tips.</p>
+        <ul>
+          <li><strong>Packa rum for rum:</strong> Hall ihop saker fran samma rum i samma kartonger</li>
+          <li><strong>Marke tydligt:</strong> Skriv pa varje kartong vilket rum den tillhor och vad den innehaller</li>
+          <li><strong>Packa det du anvander minst forst:</strong> Borja med varande och sadant du sallan anvander</li>
+          <li><strong>Forsta-natten-lada:</strong> Packa en separat lada med saker du behover direkt - sängklader, toalettartiklar, laddare</li>
+          <li><strong>Skydda omtåligt:</strong> Anvand bubbelplast, tidningar eller handdukar</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h4>Packlista for forsta-natten-ladan</h4>
+        <ul>
+          <li>Sangklader och kuddar</li>
+          <li>Toalettartiklar</li>
+          <li>Handdukar</li>
+          <li>Ombyte klader</li>
+          <li>Telefon och laddare</li>
+          <li>Mediciner</li>
+          <li>Snacks och vatten</li>
+          <li>Toalettpapper</li>
+          <li>Verktyg (skruvmejsel, tång)</li>
+          <li>Lampor eller ficklampor</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">4</div>
+        <h3>Planera de viktiga dagarna</h3>
+        <p>Sjalva flyttdagarna kraver noggrann planering. Tank pa foljande:</p>
+        <ul>
+          <li><strong>Samordna nycklar:</strong> Se till att du har tillgang till bada bostaderna under overlappningsperioden</li>
+          <li><strong>Informera viktiga parter:</strong> Arbetsgivare, skola/dagis, bank, forsakringsbolag</li>
+          <li><strong>Boka tid for stadning:</strong> Bade i gamla och nya bostaden</li>
+          <li><strong>Organisera hjalp:</strong> Boka flyttfirma eller fraga vanner</li>
+          <li><strong>Parkering:</strong> Se till att det finns plats for flyttbil vid bada adresserna</li>
+        </ul>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-number">5</div>
+        <h3>Efter flytten - kom igang i nya hemmet</h3>
+        <p>Nar flyttlasset ar tomt borjar ett nytt kapitel. Har ar vad du bor tanka pa de forsta veckorna.</p>
+        <ul>
+          <li><strong>Adressandring:</strong> Anmal flytt till Skatteverket (gor det senast flyttdagen)</li>
+          <li><strong>Eftersändning:</strong> Bestall eftersändning av post</li>
+          <li><strong>Hemforsakring:</strong> Se till att forsakringen galler for nya adressen</li>
+          <li><strong>Abonnemang:</strong> El, bredband, TV, telefon</li>
+          <li><strong>Lär kanna omradet:</strong> Hitta narmaste mataffar, vardcentral, kollektivtrafik</li>
+        </ul>
+      </div>
+
+      <div class="checklist">
+        <h4>Att gora efter flytten</h4>
+        <ul>
+          <li>Anmala flytt till Skatteverket</li>
+          <li>Uppdatera adress hos banken</li>
+          <li>Andra adress pa korkort (inom 30 dagar)</li>
+          <li>Informera arbetsgivare</li>
+          <li>Uppdatera adress for prenumerationer</li>
+          <li>Registrera dig hos vardcentral</li>
+          <li>Las av mattare for el/vatten</li>
+          <li>Lamna tillbaka nycklar till gamla bostaden</li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <h3>Behover du salja din nuvarande bostad?</h3>
+        <p>Vi hjalper dig att salja ditt hem till basta mojliga pris. Boka en kostnadsfri vardering idag.</p>
+        <a href="/vardering-av-bostad/" class="btn btn-primary">Boka vardering</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-inner">
+      <h2>Dags att hitta ditt nya hem?</h2>
+      <p>Ta en titt pa vara bostader till salu eller kontakta oss for personlig hjalp.</p>
+      <div class="cta-buttons">
+        <a href="/fastigheter-till-salu/" class="btn btn-white">Se vara bostader</a>
+        <a href="tel:+46739823962" class="btn btn-outline-white">Ring 073-982 39 62</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom: 0;">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <span class="logo-text" style="color: #fff;">Stenstadsmaklarna</span>
+          </a>
+          <p>Din lokala maklare i Sundsvall. Vi hjalper dig genom hela bostadsaffaren med personlig service och lokal expertis.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tjanster</h4>
+          <ul>
+            <li><a href="/salja-bostad/">Salja bostad</a></li>
+            <li><a href="/kopa-bostad/">Kopa bostad</a></li>
+            <li><a href="/vardering-av-bostad/">Vardering</a></li>
+            <li><a href="/fastigheter-till-salu/">Bostader till salu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Om oss</h4>
+          <ul>
+            <li><a href="/om-oss/">Om Stenstadsmaklarna</a></li>
+            <li><a href="/visningsrummet/">Visningsrummet</a></li>
+            <li><a href="/kontakta-oss/">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li>Bjorneborgsgatan 36</li>
+            <li>854 60 Sundsvall</li>
+            <li><a href="tel:+46739823962">073-982 39 62</a></li>
+            <li><a href="mailto:info@stenstadsmaklarna.se">info@stenstadsmaklarna.se</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2024 Stenstadsmaklarna. Alla rattigheter forbehallna.</span>
+        <span>Org.nr: 559000-0000</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
