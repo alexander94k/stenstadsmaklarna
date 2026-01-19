@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Stenstadsmäklarna</name>
+    <description>Locations Sitemap - Stenstadsmäklarna</description>
+    <Placemark>
+      <name>Stenstadsmäklarna</name>
+      <description>
+        <![CDATA[
+          <p><strong>Stenstadsmäklarna</strong></p>
+          <p>Björneborgsgatan 36, Sundsvall, Västernorrlands län, 854 60, Sverige</p>
+          <p>Telefon: +46 60-22 10 10</p>
+        ]]>
+      </description>
+      <address>Björneborgsgatan 36, Sundsvall, Västernorrlands län, 854 60, Sverige</address>
+      <phoneNumber>+46 60-22 10 10</phoneNumber>
+      <Point>
+        <coordinates>17.3069,62.3908,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
